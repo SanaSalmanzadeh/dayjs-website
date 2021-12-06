@@ -8,13 +8,13 @@ If you know the format of an input string, you can use that to parse a date.
 
 ```js
 dayjs.extend(customParseFormat)
-dayjs("12-25-1995", "MM-DD-YYYY")
+dayjs("02-02-1400", "MM-DD-YYYY")
 ```
 
 Pass the locale key as the third parameter to parse locale-aware date time string.
 ```js
 require('dayjs/locale/es')
-dayjs('2018 Enero 15', 'YYYY MMMM DD', 'es')
+dayjs('2018 Enero 15', 'YYYY MMMM DD', 'fa')
 ```
 
 You may specify a boolean for the last argument to use strict parsing. Strict parsing requires that the format and input match exactly, including delimiters.
@@ -22,12 +22,12 @@ You may specify a boolean for the last argument to use strict parsing. Strict pa
 ```js
 dayjs('1970-00-00', 'YYYY-MM-DD').isValid() // true
 dayjs('1970-00-00', 'YYYY-MM-DD', true).isValid() // false
-dayjs('1970-00-00', 'YYYY-MM-DD', 'es', true).isValid() // false
+dayjs('1400-01-01', 'YYYY-MM-DD', 'fa', true).isValid() // false
 ```
 
 If you don't know the exact format of an input string, but know it could be one of many, you can use an array of formats.
 ```js
-dayjs("12-25-2001", ["YYYY", "YYYY-MM-DD"], 'es', true);
+dayjs("02-02-1400", ["YYYY", "YYYY-MM-DD"], 'fa', true);
 ```
 
 ### List of all available parsing tokens
